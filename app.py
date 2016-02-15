@@ -29,7 +29,19 @@ class FizzBuzz():
 		elif i % 5 == 0:
 			return "Buzz"
 		else:
-			return i
+			if i == 2:
+				return ("{} is a prime".format(i))
+			elif i < 2:
+				return (i)
+			else:
+				for j in range(2, i):
+					if i % j == 0:
+						return(i)
+						break
+					elif j == i - 1:
+						return("{} is a prime".format(i))
+					else:
+						j += 1
        
 
 if __name__ == "__main__":
